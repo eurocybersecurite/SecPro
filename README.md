@@ -161,6 +161,7 @@ git push -u origin main
 
 ## 👥 Auteurs & contributeurs
 
+* ABDESSEMED Mohamed Redha (mohamed.abdessemed@eurocybersecurite.fr)
 * Équipe Eurocybersecurite
 * Contributions bienvenues via Pull Requests
 
