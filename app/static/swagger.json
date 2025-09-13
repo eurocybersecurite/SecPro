@@ -1,0 +1,53 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SecPro API",
+    "version": "1.0.0",
+    "description": "API documentation for SecPro application"
+  },
+  "paths": {
+    "/api/login": {
+      "post": {
+        "summary": "Login",
+        "description": "Authenticates a user and returns a JWT token",
+        "responses": {
+          "200": {
+            "description": "Successful login",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "access_token": {
+                      "type": "string",
+                      "description": "JWT access token"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/report": {
+      "get": {
+        "summary": "Generate Report",
+        "description": "Generates a security report",
+        "responses": {
+          "200": {
+            "description": "Successful report generation",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "description": "Report content"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

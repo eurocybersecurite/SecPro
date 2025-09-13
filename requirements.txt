@@ -1,0 +1,10 @@
+Flask
+Flask-JWT-Extended
+Flask-SQLAlchemy
+bcrypt
+PyPDF2
+reportlab
+pytest
+bandit
+pip-audit
+flask-swagger-ui
