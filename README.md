@@ -2,8 +2,7 @@
 
 ![SecPro Logo](https://raw.githubusercontent.com/eurocybersecurite/SecPro/main/docs/assets/logo-secpro.png)
 
-[![Build](https://github.com/eurocybersecurite/SecPro/actions/workflows/ci.yml/badge.svg)](https://github.com/eurocybersecurite/SecPro/actions)
-[![Tests](https://github.com/eurocybersecurite/SecPro/actions/workflows/tests.yml/badge.svg)](https://github.com/eurocybersecurite/SecPro/actions)
+
 [![Coverage](https://codecov.io/gh/eurocybersecurite/SecPro/branch/main/graph/badge.svg)](https://codecov.io/gh/eurocybersecurite/SecPro)
 [![Security](https://sonarcloud.io/api/project_badges/measure?project=eurocybersecurite_SecPro&metric=security_rating)](https://sonarcloud.io/dashboard?id=eurocybersecurite_SecPro)
 [![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=eurocybersecurite_SecPro&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=eurocybersecurite_SecPro)
@@ -119,12 +118,12 @@ pip-audit
 ```
 
 ### 🔐 Bonnes pratiques sécurité
-- 🔑 Secrets stockés via variables d’environnement (.env)
-- 🔒 CSRF protection activée
-- 🔑 JWT pour l’API + sessions sécurisées
-- 🔏 TOTP 2FA activable pour les comptes
-- 📜 Logs structurés avec audit trail
-- 🔐 HTTPS obligatoire en production
+- Secrets stockés via variables d’environnement (.env)
+- CSRF protection activée
+- JWT pour l’API + sessions sécurisées
+- TOTP 2FA activable pour les comptes
+- Logs structurés avec audit trail
+- HTTPS obligatoire en production
 
 ### 📤 Déploiement GitHub
 ```bash
