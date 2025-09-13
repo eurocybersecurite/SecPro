@@ -44,7 +44,7 @@ Elle combine des fonctionnalités d’**audit de cybersécurité**, de **planifi
 ---
 
 ## 🏗️ Architecture du projet
-
+```bash
 SecPro/
 ├─ app.py # Entrée principale Flask
 ├─ requirements.txt # Dépendances Python
@@ -69,7 +69,7 @@ SecPro/
 └─ migrations/ # Gestion de la base (Flask-Migrate)
 
 ---
-
+```
 ## 📸 Captures d’écran
 
 - **Dashboard**  
@@ -140,8 +140,8 @@ git push -u origin main
 
 ## 👥 Auteurs & contributeurs
 
-🧑‍💻 Équipe EuroCyberSécurité  
-🤝 Contributions bienvenues via Pull Requests
+- Équipe Eurocybersecurite  
+- Contributions bienvenues via Pull Requests
 
 ## 📜 Licence
 
