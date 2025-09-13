@@ -145,4 +145,4 @@ git push -u origin main
 
 ## 📜 Licence
 
-Distribué sous licence MIT. Voir [LICENSE](LICENSE).
+Distribué sous licence. Voir [LICENSE](LICENSE).
