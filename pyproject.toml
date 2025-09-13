@@ -4,12 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "secpro"
-version = "0.1.0"
+version = "0.1.1"
 description = "Toolkit d'audit et remédiation cybersécurité"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
+    { name="ABDESSEMED Mohamed Redha", email="mohamed.abdessemed@eurocybersecurite.fr" },
     { name="EuroCyberSécurité", email="contact@eurocybersecurite.fr" }
 ]
 classifiers = [
