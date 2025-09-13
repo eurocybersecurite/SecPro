@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secpro"
+version = "0.1.0"
+description = "Toolkit d'audit et remédiation cybersécurité"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name="EuroCyberSécurité", email="contact@eurocybersecurite.fr" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["cybersecurity", "audit", "remediation", "flask", "python"]
+dependencies = [
+    "flask>=2.2",
+    "requests",
+    "jinja2",
+    "pytest"
+]
