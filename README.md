@@ -1,6 +1,5 @@
 # 🛡️ SecPro — Secure & Proactive Cybersecurity Toolkit
 
-![SecPro Logo](https://raw.githubusercontent.com/eurocybersecurite/SecPro/main/docs/assets/logo-secpro.png)
 
 
 [![Coverage](https://codecov.io/gh/eurocybersecurite/SecPro/branch/main/graph/badge.svg)](https://codecov.io/gh/eurocybersecurite/SecPro)
@@ -72,10 +71,9 @@ SecPro/
 ## 📸 Captures d’écran
 
 - **Dashboard**  
-  ![Dashboard](https://raw.githubusercontent.com/eurocybersecurite/SecPro/main/docs/assets/dashboard.png)
+ 
 
 - **Rapport de scan**  
-  ![Scan Details](https://raw.githubusercontent.com/eurocybersecurite/SecPro/main/docs/assets/scan-report.png)
 
 ---
 
