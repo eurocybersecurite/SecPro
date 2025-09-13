@@ -35,4 +35,4 @@ This document describes the functionalities of the SecPro application.
 29. **Security Governance:** Provides a framework for governing security.
 30. **Security Automation:** Automates security tasks to improve efficiency.
 
-[Placeholder for detailed descriptions of each functionality]
+
