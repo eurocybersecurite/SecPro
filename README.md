@@ -18,9 +18,7 @@ See [docs/FUNCTIONALITIES.md](docs/FUNCTIONALITIES.md) for a detailed descriptio
 
 ## Screenshots
 
-![Screenshot 1](https://example.com/screenshot1.png)
-![Screenshot 2](https://example.com/screenshot2.png)
-![Screenshot 3](https://example.com/screenshot3.png)
+See [docs/FUNCTIONALITIES.md](docs/FUNCTIONALITIES.md) for screenshots of the application.
 
 ## License
 
