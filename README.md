@@ -170,3 +170,6 @@ git push -u origin main
 ## 📜 Licence
 
 Distribué sous licence. Voir [LICENSE](LICENSE).
+
+
+* Mise à jour de la documentation 16/09/2025
