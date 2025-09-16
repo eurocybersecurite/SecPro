@@ -34,5 +34,4 @@ This document describes the functionalities of the SecPro application.
 28. **Security Reporting:** Generates reports on security status.
 29. **Security Governance:** Provides a framework for governing security.
 30. **Security Automation:** Automates security tasks to improve efficiency.
-
-
+31. **Sécurité des conteneurs:** Protège les conteneurs contre les menaces.

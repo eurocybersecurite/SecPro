@@ -37,6 +37,10 @@ def login():
 def generate_report():
     return "Report generated"  # Replace with actual report generation logic
 
+@app.route('/api/container_security')
+def container_security():
+    return "Container security scan initiated" # Replace with actual container security logic
+
 @app.route('/')
 def hello_world():
     return 'Hello, SecPro!'
