@@ -20,7 +20,7 @@ Elle combine des fonctionnalités d’**audit de cybersécurité**, de **planifi
 * API REST sécurisée (JWT, Swagger/OpenAPI)
 * Gestion des rôles & utilisateurs (RBAC + 2FA)
 * Génération de rapports 📊 (PDF/CSV)
-* 30+ fonctionnalités cybersécurité (audits, remédiations, gouvernance)
+* 31+ fonctionnalités cybersécurité (audits, remédiations, gouvernance)
 
 ---
 
@@ -36,7 +36,7 @@ Elle combine des fonctionnalités d’**audit de cybersécurité**, de **planifi
 ✅ API REST documentée (Swagger/OpenAPI)
 ✅ Dashboard intuitif avec KPI sécurité
 
-📌 👉 La liste complète des **30 fonctionnalités** se trouve dans [docs/FUNCTIONALITIES.md](docs/FUNCTIONALITIES.md).
+📌 👉 La liste complète des **31 fonctionnalités** se trouve dans [docs/FUNCTIONALITIES.md](docs/FUNCTIONALITIES.md).
 
 ---
 
@@ -135,6 +135,15 @@ pip-audit
 
 ---
 
+## 📝 Changelog
+
+### Version 0.1.2 (16/09/2025)
+- **Nouvelle fonctionnalité** : Ajout de la **Sécurité des conteneurs**.
+- **Correction** : Nettoyage des anciens artefacts de build.
+- **Mise à jour** : Version de l'application mise à jour à `0.1.2`.
+
+---
+
 ### 🔐 Bonnes pratiques sécurité
 
 * Secrets stockés via variables d’environnement (.env)
@@ -149,12 +158,14 @@ pip-audit
 ### 📤 Déploiement GitHub
 
 ```bash
-git init
+# Ajouter les fichiers au staging
 git add .
-git commit -m "feat: initial SecPro release"
-git branch -M main
-git remote add origin https://github.com/eurocybersecurite/SecPro.git
-git push -u origin main
+
+# Créer un commit
+git commit -m "feat: description de votre fonctionnalité"
+
+# Pousser les modifications
+git push origin main
 ```
 
 ---
