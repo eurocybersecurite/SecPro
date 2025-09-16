@@ -172,4 +172,4 @@ git push -u origin main
 Distribué sous licence. Voir [LICENSE](LICENSE).
 
 
-* Mise à jour de la documentation 16/09/2025
+* Mise à jour de la documentation 16/09/2025 V02
