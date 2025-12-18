@@ -1,29 +1,14 @@
 #!/usr/bin/env python3
 import argparse
-import os
 from pathlib import Path
-from secpro import SecPro  # ton moteur SecPro réel
+from secpro import SecPro
 from termcolor import colored
 
 def analyze_file(file_path: Path):
-    """
-    Analyse réelle d'un fichier avec SecPro.
-    Retourne un dictionnaire avec 'issues' et 'summary'.
-    """
-    try:
-        # Appel à la vraie fonction SecPro
-        result = SecPro.scan_file(str(file_path))  # adapter selon ton code SecPro
-        return result
-    except Exception as e:
-        return {
-            "issues": [f"Erreur lors de l'analyse: {e}"],
-            "summary": {"lines": 0, "warnings": 0}
-        }
+    result = SecPro.scan_file(str(file_path))
+    return result
 
 def scan_target(target_path: str):
-    """
-    Scanne un dossier ou un fichier.
-    """
     p = Path(target_path)
     all_results = []
 
@@ -41,7 +26,6 @@ def scan_target(target_path: str):
         for issue in result.get("issues", []):
             print(colored(f"  - {issue}", "yellow"))
 
-    # Résumé global
     total_files = len(files_to_scan)
     total_issues = sum(len(r.get("issues", [])) for r in all_results)
     print("\n" + colored("=== Résumé du scan ===", attrs=["bold"]))
