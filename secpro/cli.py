@@ -1,62 +1,63 @@
 #!/usr/bin/env python3
 import argparse
 import os
-import json
-from secpro import audit  # Supposons que ton module principal s'appelle audit
+from pathlib import Path
+from secpro import SecPro  # ton moteur SecPro réel
+from termcolor import colored
 
-def scan(target_path):
+def analyze_file(file_path: Path):
     """
-    Parcourt tous les fichiers du dossier target_path
-    et applique les fonctions d'audit de SecPro.
+    Analyse réelle d'un fichier avec SecPro.
+    Retourne un dictionnaire avec 'issues' et 'summary'.
     """
-    results = []
+    try:
+        # Appel à la vraie fonction SecPro
+        result = SecPro.scan_file(str(file_path))  # adapter selon ton code SecPro
+        return result
+    except Exception as e:
+        return {
+            "issues": [f"Erreur lors de l'analyse: {e}"],
+            "summary": {"lines": 0, "warnings": 0}
+        }
 
-    if not os.path.exists(target_path):
-        print(f"[Error] Le chemin {target_path} n'existe pas.")
+def scan_target(target_path: str):
+    """
+    Scanne un dossier ou un fichier.
+    """
+    p = Path(target_path)
+    all_results = []
+
+    if not p.exists():
+        print(colored(f"Erreur: le chemin {target_path} n'existe pas.", "red"))
         return
 
-    for root, dirs, files in os.walk(target_path):
-        for file in files:
-            file_path = os.path.join(root, file)
-            # Appelle la fonction d'audit principale (à adapter selon ton code)
-            try:
-                report = audit.analyze_file(file_path)  # <-- ton code SecPro ici
-                results.append({
-                    "file": file_path,
-                    "issues": report.get("issues", []),
-                    "summary": report.get("summary", {})
-                })
-            except Exception as e:
-                results.append({
-                    "file": file_path,
-                    "error": str(e)
-                })
+    files_to_scan = [p] if p.is_file() else list(p.rglob("*.py"))
 
-    # Affichage lisible
-    print(json.dumps(results, indent=2, ensure_ascii=False))
+    for file_path in files_to_scan:
+        print(colored(f"Analyse de {file_path} ...", "cyan"))
+        result = analyze_file(file_path)
+        all_results.append(result)
 
+        for issue in result.get("issues", []):
+            print(colored(f"  - {issue}", "yellow"))
+
+    # Résumé global
+    total_files = len(files_to_scan)
+    total_issues = sum(len(r.get("issues", [])) for r in all_results)
+    print("\n" + colored("=== Résumé du scan ===", attrs=["bold"]))
+    print(colored(f"Fichiers analysés : {total_files}", "green"))
+    print(colored(f"Total problèmes détectés : {total_issues}", "red" if total_issues > 0 else "green"))
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="SecPro CLI - Audit et remédiation cybersécurité"
-    )
-    subparsers = parser.add_subparsers(dest="command")
-
-    # Commande scan
-    scan_parser = subparsers.add_parser(
-        "scan", help="Scanner un dossier ou fichier pour audit SecPro"
-    )
-    scan_parser.add_argument(
-        "--target", "-t", required=True, help="Chemin vers le dossier ou fichier à analyser"
-    )
-
+    parser = argparse.ArgumentParser(description="SecPro CLI - Audit de sécurité automatisé")
+    parser.add_argument("command", choices=["scan"], help="Commande à exécuter")
+    parser.add_argument("--target", "-t", required=True, help="Fichier ou dossier à analyser")
     args = parser.parse_args()
 
     if args.command == "scan":
-        scan(args.target)
+        scan_target(args.target)
     else:
-        parser.print_help()
-
+        print("Commande non reconnue")
 
 if __name__ == "__main__":
     main()
