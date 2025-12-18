@@ -25,7 +25,7 @@ Elle combine des fonctionnalités d’**audit de cybersécurité**, de **planifi
 ---
 
 ## 🚀 Fonctionnalités principales
-
+```bash
 ✅ Scan des dépendances (pip-audit / safety)
 ✅ Audit de configurations (SSH, TLS, headers HTTP)
 ✅ Détection OWASP Top10 (XSS, SQLi…)
@@ -35,7 +35,7 @@ Elle combine des fonctionnalités d’**audit de cybersécurité**, de **planifi
 ✅ Rapports détaillés (PDF/CSV)
 ✅ API REST documentée (Swagger/OpenAPI)
 ✅ Dashboard intuitif avec KPI sécurité
-
+```
 📌 👉 La liste complète des **31 fonctionnalités** se trouve dans [docs/FUNCTIONALITIES.md](docs/FUNCTIONALITIES.md).
 
 ---
@@ -121,7 +121,7 @@ flake8 .
 bandit -r secpro -lll
 pip-audit
 ```
-
+⚠️ Si flake8 ou bandit ne répondent pas ou génèrent des erreurs, mettre à jour PHP et installer la version latest de ces packages dans votre environnement.
 ---
 
 ## 🗺️ Feuille de route (Roadmap)
