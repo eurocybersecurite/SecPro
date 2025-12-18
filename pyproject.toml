@@ -25,3 +25,5 @@ dependencies = [
     "jinja2",
     "pytest"
 ]
+[project.scripts]
+secpro = "secpro.cli:main"
