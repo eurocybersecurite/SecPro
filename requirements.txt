@@ -8,3 +8,4 @@ pytest
 bandit
 pip-audit
 flask-swagger-ui
+termcolor>=2.3.0
