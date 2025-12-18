@@ -2,7 +2,7 @@
 import argparse
 import os
 from pathlib import Path
-from secpro import SecPro  # ton moteur SecPro réel
+from secpro import SecPro  
 from termcolor import colored
 
 def analyze_file(file_path: Path):
@@ -11,8 +11,8 @@ def analyze_file(file_path: Path):
     Retourne un dictionnaire avec 'issues' et 'summary'.
     """
     try:
-        # Appel à la vraie fonction SecPro
-        result = SecPro.scan_file(str(file_path))  # adapter selon ton code SecPro
+        
+        result = SecPro.scan_file(str(file_path))  
         return result
     except Exception as e:
         return {
